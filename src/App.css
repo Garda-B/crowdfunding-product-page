@@ -1,38 +1,664 @@
-.App {
-  text-align: center;
+* {
+
+  box-sizing: border-box;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  margin: 0;
+  font-family: var(--Font);
+  background-color: #F5F5F5;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+
+  --Dark-gray: hsl(0, 0%, 48%);
+
+  --Font: 'Commissioner', sans-serif;
+  --Background: #F5F5F5;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.desktop {
+
+  background: url(images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 2.5% 10%;
+
+
+}
+
+.desktop ul {
   color: white;
+  list-style: none;
+  display: flex;
+  gap: 2em;
+
 }
 
-.App-link {
-  color: #61dafb;
+.darkbackground {
+  display: none;
+  opacity: 0.7;
+  background-color: black;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.desktop li {
+
+  max-height: 10%;
+}
+
+.wrapper {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -415%;
+  margin: 0 auto;
+  z-index: 0;
+
+
+}
+
+.mainlogo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 98.5%;
+  margin: 0 auto;
+
+}
+
+.flex {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionone {
+  text-align: center;
+  background-color: white;
+  padding: 4% 10%;
+  border-radius: 8px;
+}
+
+p {
+  color: hsl(0, 0%, 48%);
+}
+
+.button {
+  padding: 1.3em 3em;
+  background-color: var(--Moderate-cyan);
+  color: white;
+  border-radius: 24px;
+  border: none;
+
+  font-family: inherit;
+
+
+}
+
+.bookmark {
+  padding: 1.2em 3em;
+  background-color: var(--Background);
+  color: white;
+  border-radius: 24px;
+  border: none;
+  color: var(--Dark-gray);
+  font-family: inherit;
+  font-weight: 500;
+  position: relative;
+
+}
+
+
+.sectiononebuttons {
+  margin-top: 5%;
+  margin-bottom: 3%;
+
+}
+
+.bookmarklogo {
+  position: absolute;
+  left: -14%;
+  bottom: 0%;
+  width: 50px;
+
+}
+
+.bookmark:hover {
+  
+  filter: brightness(110%);
+  background-color: var(--Background);
+
+}
+
+
+.bookmarklogo:hover {
+  filter: brightness(120%);
+}
+
+.sectiontwo {
+  margin-top: 1.5em;
+  text-align: center;
+  background-color: white;
+  padding: 4% 10%;
+  border-radius: 8px;
+}
+
+.largenumber {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: black;
+  text-align: left;
+
+}
+
+.sectiontwo .flex div {
+
+  width: 30%;
+}
+
+.sectiontwo .flex div:nth-of-type(1) {
+
+  border-right: 2px solid var(--Background);
+  padding-right: 1em;
+}
+
+.sectiontwo .flex div:nth-of-type(2) {
+
+  border-right: 2px solid var(--Background);
+  padding-right: 1em;
+}
+
+.sectiontwo p {
+  margin: 0;
+  text-align: left;
+}
+
+.sectiontwo .flex p:nth-of-type(2) {
+
+  margin-top: 5px;
+}
+
+
+.range {
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--Background);
+  height: 10px;
+  margin-top: 5%;
+}
+
+.part1 {
+
+  background-color: var(--Moderate-cyan);
+  height: 10px;
+  border-radius: 16px;
+
+}
+
+.sectionthree {
+  text-align: left;
+  background-color: white;
+  padding: 4% 6%;
+  border-radius: 8px;
+  margin-top: 1.5em;
+  margin-bottom: 7em;
+}
+
+.sectionthree p {
+
+  line-height: 1.7em;
+}
+
+.edition {
+  padding: 5%;
+  border: 1px solid var(--Dark-gray);
+  border-radius: 6px;
+}
+
+.edition:nth-of-type(1) {
+  margin-top: 2.5em;
+
+}
+
+.edition:nth-of-type(2) {
+  margin-top: 1.5em;
+
+}
+
+.edition:nth-of-type(3) {
+  margin-top: 1.5em;
+  opacity: 0.5;
+}
+
+.figure {
+
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+}
+
+.edition button {
+  padding: 1.2em 3em;
+  max-height: 3.75em;
+  background-color: var(--Moderate-cyan);
+  color: white;
+  border-radius: 24px;
+  border: none;
+  font-family: inherit;
+
+}
+
+.edition .flex {
+
+  align-items: center;
+}
+
+.editiontype {
+  color: black;
+  font-weight: 700;
+
+}
+
+.edition .flex p:nth-of-type(2) {
+  color: var(--Moderate-cyan);
+  font-weight: 700;
+
+}
+
+.edition .flex p:nth-of-type(1) {
+  display: flex;
+  gap: .3em;
+
+
+}
+
+.mobile {
+  display: none;
+}
+
+.bookmarklogomobile {
+  display: none;
+}
+
+.windownotvisible {
+
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: white;
+  padding: 4% 6%;
+  border-radius: 8px;
+  width: 65%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+
+}
+
+.windownotvisible .flex {
+
+  align-items: flex-start;
+
+}
+
+.windownotvisible p {
+  margin: 0;
+
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+.radioinput {
+  appearance: none;
+
+  background-color: #fff;
+  margin-right: 1.5em;
+  width: 2.2em;
+  height: 2.2em;
+  border: 0.1em solid var(--Dark-gray);
+  border-radius: 50%;
+
+}
+
+.radioinput:hover {
+cursor: pointer;
+
+}
+
+.windownotvisible h2 {
+  margin: 0;
+  margin-bottom: 1em;
+
+}
+
+.windownotvisible .flex img:hover {
+
+  cursor: pointer;
+}
+
+
+.windowedition {
+
+
+  padding: 5%;
+  border: 1px solid var(--Dark-gray);
+  border-radius: 6px;
+  margin-bottom: 1.5em;
+}
+
+.windowedition:nth-of-type(5) {
+  opacity: .5;
+
+}
+
+.windowedition .flex p {
+
+  gap: .3em;
+}
+
+.cyan {
+
+  color: var(--Dark-cyan)
+}
+
+
+
+.form {
+
+  border-top: solid 1px var(--Dark-gray);
+  align-items: center !important;
+  padding-top: 2em;
+}
+
+.form p {
+  margin: 0;
+
+}
+
+.form form {
+  text-align: center;
+
+}
+
+.form button {
+  padding: 1.2em 2em;
+  max-height: 3.75em;
+  background-color: var(--Moderate-cyan);
+  color: white;
+  border-radius: 24px;
+  border: none;
+  font-family: inherit;
+
+}
+
+
+
+.pledgeinput {
+  width: 25%;
+  padding: .75em;
+  border: 1px solid var(--Dark-gray);
+  border-radius: 21px;
+  margin-right: 1.5em;
+  text-align: center;
+
+}
+
+.pledgeinput:focus::placeholder {
+  color: transparent;
+}
+
+
+.selected {
+
+  border: 3px solid var(--Moderate-cyan);
+
+}
+
+.parent {
+  position: relative;
+}
+
+.circle {
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--Moderate-cyan);
+  border: none;
+  left: 22%;
+  top: 28%;
+}
+
+.modalcomplete {
+  width: 33%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2em 1.5em;
+  border-radius: 7px;
+  line-height: 1.5em;
+
+
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.modalcomplete button {
+  font-weight: 700;
+
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
+}
+
+li {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 869px) {
+
+  .desktop {
+    display: none;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile {
+    display: block;
+    position: relative;
+    background: url(images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8% 6%;
+
   }
+
+
+  .main {
+    position: absolute;
+    width: 85%;
+    bottom: -786%;
+
+
+  }
+
+  .flex {
+    flex-direction: column;
+
+  }
+
+  .edition .flex {
+
+    align-items: flex-start;
+  }
+
+  .mainlogo {
+
+    bottom: 99%;
+  }
+
+  .sectionone .flex {
+    flex-direction: row;
+    align-items: center;
+    line-height: 1.5em;
+
+  }
+
+  .bookmark {
+    display: none;
+  }
+
+  .bookmarklogomobile {
+    display: block;
+  }
+
+  .sectionone button {
+    padding: 1em 3em;
+  }
+
+  .sectiontwo .flex div:nth-of-type(1) {
+    border-right: none;
+    border-bottom: 2px solid var(--Background);
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .sectiontwo .flex div:nth-of-type(2) {
+    border-right: none;
+    border-bottom: 2px solid var(--Background);
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  .sectiontwo .flex {
+    align-items: center;
+    line-height: 2em;
+  }
+
+  .sectiontwo .flex div {
+    width: 70%;
+  }
+
+  .sectiontwo p,
+  .largenumber {
+    text-align: center;
+  }
+
+  .range {
+
+    margin: 1em 0;
+  }
+
+  .sectionthree button {
+    font-weight: 700;
+  }
+
+  .edition .flex:nth-of-type(1) p {
+    margin: 0;
+  }
+
+  .mobilemenu {
+    width: 85%;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 10%;
+    z-index: 1;
+
+
+  }
+
+  .mobilemenu ul {
+    list-style: none;
+    font-weight: 500;
+    padding-left: 0;
+    margin: 0;
+  }
+
+
+.mobilemenu ul li:nth-of-type(1),
+.mobilemenu ul li:nth-of-type(2) {
+
+  border-bottom: solid 1px rgba(237, 231, 225);
+
+}
+
+.mobilemenu ul li {
+  padding: 1.5em 2em;
+}
+
+.opaque {
+
+  opacity: .7;
+  filter: brightness(50%);
+}
+
+.windownotvisible {
+
+  width: 80%;
+}
+
+.windownotvisible .flex {
+
+  flex-direction: row;
+}
+
+.windownotvisible .form {
+  flex-direction: column;
+}
+
+.windownotvisible form {
+  margin-top: 1em;
+}
+
+.circle {
+  left:21%;
+  top:28%;
+}
+
+.modalcomplete {
+
+  width: 80%;
+}
+
 }
